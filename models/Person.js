@@ -34,6 +34,14 @@ const personSchema = new mongoose.Schema({
     required: true,
     min: 0, // Ensures salary is a positive number
   },
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 const Person = mongoose.model("Person", personSchema);
 module.exports = Person;
