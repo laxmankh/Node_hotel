@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 3000;
 const Personroute = require("./Routes/Personroute");
 const MenuRoute = require("./Routes/MenuRoute");
 
-app.use("/person", localauthmiddleware, Personroute);
-app.use("/menu", localauthmiddleware, MenuRoute);
+app.use("/person", Personroute);
+app.use("/menu", MenuRoute);
 app.listen(PORT, () => {
   console.log(`application run on port no ${PORT}`);
 });
